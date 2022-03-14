@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!--RESULTADO-->
+    
+        <div class="modal">
+                <div class="modal-item">
+                    <h1 class="game-text">Resultado</h1>
+                </div>
+                <div class="modal-item">
+                    <p>Tu consumo por hora es de <span id="total"></span></p>
+                    
+                </div>
+                <div class="modal-item">
+                    <p id="explicacion">Este calculo se realizó multiplicando el voltaje por las horas de horas de uso de cada dispositvo y al final se hizo la suma. Los valores de Watts de los dispositivos pedidos en las preguntas son los más comunes en la actualidad.
+                        Si deseas consultar el voltaje consumido de algún dispositivo, puedes verificar en sus especificaciones cuantos voltios consume.
+                    </p>
+                </div>
+                <div class="modal-item">
+                    <h3 id="formula">Watts gastados por hora de dispositivo = Watts x Hora</h3>
+                </div>
+
+                <div class="modal-item">
+                    <div class="imagen-modal">
+                        <img src="https://www.suncolombia.com/wp-content/uploads/2019/01/microndas.png" alt="">
+                        </div>
+                </div>
+                
+
+                <div class="modal-item">
+                    <button id="btn-accept">aceptar</button>
+                </div>
+        </div>
+   
+    
+    <!--PREGUNTAS-->
+    <div class="grid-container">
+        
+        <div class="grid-item informacion">
+            <div class="titulo-container">
+                <h1>Cálculo de  consumo de energía eléctrica por hora  dados los hábitos semanales</h1>
+            </div>
+            <div class="info-container">
+                <p>Responde las siguientes preguntas basándote en tus hábitos de uso de aparatos electrónicos semanales para conocer cuantos Watts consumes por hora </p>
+            </div>
+            
+        </div>
+
+        <div class="grid-item">
+            <div class="pregunta">
+                <label for="" class="label-pregunta">¿Cuánto tiempo dejas prendida la telvisión durante el día?</label>
+            </div>
+            <select name="" id="opcion-tele">
+                <option value="22">Selecciona una opción</option>
+                <option value="1">1 hora</option>
+                <option value="2">2 horas</option>
+                <option value="4">4 horas</option>
+                <option value="5">5 horas o más</option>
+                <option value="0">No uso la televisión</option>
+            </select>
+            <div class="img-container">
+                <img src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2020/09/hipertextual-netflix-podria-subir-sus-precios-europa-muy-pronto-2020784357-scaled.jpg?fit=1200%2C817&ssl=1" alt="">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="pregunta">
+                <label for="" class="label-pregunta">¿Cuánto tiempo utiliza la lavadora?</label>
+            </div>
+            <select name="" id="opcion-lavadora">
+                <option value="22">Selecciona una opción</option>
+                <option value="20">20 minutos</option>
+                <option value="30">30 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="1">Entre 1 o 2 horas</option>
+                <option value="0">No uso la lavadora</option>
+            </select>
+            <div class="img-container">
+                <img src="https://img.freepik.com/foto-gratis/mujer-haciendo-tareas-diarias-lavanderia-mujer-ropa-limpia-doblada-canasta-lavanderia-vista-lateral-concepto-limpieza-lavado-centrarse-lavadora_183219-5839.jpg?size=626&ext=jpg" alt="">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="pregunta">
+                <label for="" class="label-pregunta">¿Cuánto tiempo utiliza la computadora con monitor?</label>
+            </div>
+            <select name="" id="opcion-computadora">
+                <option value="22">Selecciona una opción</option>
+                <option value="1">1 hora</option>
+                <option value="2">2 horas</option>
+                <option value="4">Más de 3 horas</option>
+                <option value="0">No uso la lavadora</option>
+            </select>
+            <div class="img-container">
+                <img src="https://i.3djuegos.com/juegos/17692/_noticias2020_/fotos/maestras/_noticias2020_-5519880.jpg" alt="">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="pregunta">
+                <label for="" class="label-pregunta">¿Cuánto tiempo utiliza algún equipo de música?</label>
+            </div>
+            <select name="" id="opcion-musica">
+                <option value="22">Selecciona una opción</option>
+                <option value="1">1 hora</option>
+                <option value="2">2 horas</option>
+                <option value="3">Más de 2 horas</option>
+                <option value="0">No uso el equipo de música</option>
+            </select>
+            <div class="img-container">
+                <img src="https://laopinion.com/wp-content/uploads/sites/3/2020/08/91DnMPDrRfL._AC_SL1500_-e1597803497525.jpg?quality=80&strip=all&w=1200" alt="">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="pregunta">
+                <label for="" class="label-pregunta">¿Cuánto tiempo deja prendido el refrigerador?</label>
+            </div>
+            <select name="" id="opcion-refrigerador">
+                <option value="22">Selecciona una opción</option>
+                <option value="24">24 horas</option>
+                <option value="12">12 horas</option>
+                <option value="20">Entre 18 y 24 horas</option>
+                <option value="0">No tengo refrigerdor</option>
+            </select>
+            <div class="img-container">
+                <img src="https://media.admagazine.com/photos/618a70f996bc0f80f8b43459/master/w_1600%2Cc_limit/55629.jpg" alt="">
+            </div>
+
+        </div>
+        <div class="grid-item">
+            <div class="pregunta">
+                <label for="" class="label-pregunta">¿Cuánto tiempo utilizas la plancha de ropa?</label>
+            </div>
+            <select name="" id="opcion-plancha">
+                <option value="22">Selecciona una opción</option>
+                <option value="10">10 minutos</option>
+                <option value="15">15 minutos</option>
+                <option value="25">Entre 25 y 30 minutos</option>
+                <option value="0">No uso la plancha diario</option>
+            </select>
+            <div class="img-container">
+                <img src="https://estaticos-cdn.prensaiberica.es/clip/ffeb4483-81e2-4d9c-98b4-883bb345ea08_16-9-aspect-ratio_default_0.jpg" alt="">
+            </div>
+        </div>
+        <div class="grid-item button">
+            <button id="btn-calcular">Calcular</button>
+        </div>
+        <!--REFERENCIAS-->
+        <div class="grid-item referencias" >
+            <h3>Referencias</h3>
+            <li>Peña, A. C., & Sánchez, J. M. G. (2012). Gestión de la eficiencia energética: cálculo del consumo, indicadores y mejora. AENOR.</li>
+            <li>Cundapí Cundapí, C. (2021). Cálculo del consumo de energía eléctrica en viviendas.Fuente: <a href="https://repositorio.unicach.mx/handle/20.500.12753/4134">https://repositorio.unicach.mx/handle/20.500.12753/4134</a></li>
+            <li>Macías García, M. E., Contreras Hinojosa, C., Anaya Zamora, R., García, M. E. M., Hinojosa, C. C., & Zamora, R. A. Consumo de energía eléctrica. Fuente: <a href="https://repositorio.tec.mx/handle/11285/631169">https://repositorio.tec.mx/handle/11285/631169</a></li>
+            
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
